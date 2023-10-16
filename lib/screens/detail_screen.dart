@@ -8,9 +8,12 @@ import 'package:tutorial_webtoon/widgets/episode_widget.dart';
 class DetailScreen extends StatefulWidget {
   final String id, title, thumb;
 
-  const DetailScreen(
-      {Key? key, required this.id, required this.title, required this.thumb})
-      : super(key: key);
+  const DetailScreen({
+    Key? key,
+    required this.id,
+    required this.title,
+    required this.thumb,
+  }) : super(key: key);
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();
@@ -69,7 +72,10 @@ class _DetailScreenState extends State<DetailScreen> {
         backgroundColor: Colors.white,
         title: Text(
           widget.title,
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+          style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
         ),
         actions: [
           IconButton(
@@ -84,7 +90,10 @@ class _DetailScreenState extends State<DetailScreen> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 40),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 50,
+            vertical: 40,
+          ),
           child: Column(
             children: [
               Row(
@@ -99,9 +108,10 @@ class _DetailScreenState extends State<DetailScreen> {
                         borderRadius: BorderRadius.circular(15),
                         boxShadow: [
                           BoxShadow(
-                              blurRadius: 15,
-                              offset: const Offset(10, 10),
-                              color: Colors.black.withOpacity(0.5))
+                            blurRadius: 15,
+                            offset: const Offset(10, 10),
+                            color: Colors.black.withOpacity(0.5),
+                          ),
                         ],
                       ),
                       child: Image.network(
